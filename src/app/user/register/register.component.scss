@@ -1,0 +1,148 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Register Container */
+.register-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: slideIn 1s ease-out;
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Label */
+.form-group label {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Input fields */
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background: #f4f7fa;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Input field focus */
+.form-group input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+/* Error messages */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover */
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Button disabled state */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Link */
+p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+p a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+p a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register-container {
+    padding: 30px;
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Animation for form */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

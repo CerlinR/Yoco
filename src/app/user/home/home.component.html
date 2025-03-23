@@ -1,0 +1,41 @@
+<div class="video-container">
+    <video 
+      #videoPlayer 
+      width="100%" 
+      controls
+      (play)="onPlay()" 
+      (pause)="onPause()" 
+      (ended)="onEnded()">
+      <source src="assets/istockphoto-1753779792-640_adpp_is.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+    <div class="controls">
+      <button (click)="togglePlay()">Play/Pause</button>
+      <button (click)="seekVideo(-10)">⏪ 10s</button>
+      <button (click)="seekVideo(10)">10s ⏩</button>
+      <button (click)="toggleFullScreen()">Full Screen</button>
+  
+      <div class="progress-bar">
+        <div #progressBar class="progress"></div>
+      </div>
+  
+      <label>Playback Speed:</label>
+      <select (change)="changePlaybackRate($event)">
+        <option value="0.5">0.5x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+      </select>
+  
+      <label>Volume:</label>
+      <input type="range" min="0" max="1" step="0.1" (input)="changeVolume($event)">
+  
+      <button (click)="playPrevious()">⏮ Previous</button>
+      <button (click)="playNext()">Next ⏭</button>
+    </div>
+  
+    <p>Current Time: {{ currentTime | number:'1.0-2' }}s / {{ videoDuration | number:'1.0-2' }}s</p>
+    <p>Buffered Time: {{ bufferedTime | number:'1.0-2' }}s</p>
+  </div>
+  
