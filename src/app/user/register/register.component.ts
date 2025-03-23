@@ -202,4 +202,8 @@ export class RegisterComponent {
       }
     }
   }
+
+  login(){
+    this.router.navigate(['user/login']); 
+  }
 }

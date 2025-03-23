@@ -154,11 +154,12 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../Services/auth.service';
 import { Router, RouterLink, RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterModule, browse ],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterModule ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
   })
@@ -186,5 +187,10 @@ export class LoginComponent {
         alert('Invalid credentials. Please try again.');
       }
     }
+  }
+
+  register(){
+    this.router.navigate(['user/register']); 
+
   }
 }
